@@ -77,7 +77,6 @@ color: grey;
 margin: 12px;
 }
 footer{
-color: grey;
 display:flex;
 flex-direction:row-reverse;
 justify-content: space-between;
@@ -90,10 +89,15 @@ List-style: none;
 text-align: right;
 }
 footer nav ul a:hover{
-color: #18122B;	
+color: grey;	
 background-color: transparent;
 text-decoration: underline;
-
+}
+footer nav ul li a{
+	color: black;
+}
+footer p{
+	color: black;
 }
 label{
 	display:block;
