@@ -5,33 +5,71 @@
     <title>Microjuego</title>
 	<link rel="stylesheet" href="estilo.css" />
 </head>
+	<script>
+	let numero = Math.floor(Math.random()*100)+1;
+	let contador = 0;
+	
+	function compara_numero (){
+	let mi_numero_input = document.getElementById("campo-numero");
+	let mi_numero = mi_numero_input.value;
+	let resultado = document.getElementById("resultado");
+	let submit_input = document.getElementById("field-submit");
+	
+	if (mi_numero < 1 || mi_numero > 100){
+	mi_numero_input.value = " ";
+	}else{
+		contador++;
+	}
+	submit_input.value = "Adivina! ("+contador+")";
 
+
+	
+	if (mi_numero > numero){
+	resultado.innerHTML = "<em class=\"error\">El numero a adivinar es mas pequeño que "+mi_numero+"</em>";
+	//resultado.style.color = "#ff0000"
+	}
+	else if (mi_numero < numero){
+	resultado.innerHTML = "<em class=\"error\">El numero a adivinar es mas grande que "+mi_numero+"</em>";
+	//resultado.style.color = "#ff0000"
+	}
+	else {
+	resultado.innerHTML = "<em class= \"you-win\">Felicidades has ganado, el numero era "+mi_numero+"!</em>";
+	//resultado.style.color = "#00ff00"
+	}
+	mi_numero_input.value = " ";
+	mi_numero_input.focus();
+}
+	</script>
+	
 <body>
-    
-
-    <header>
-            <h1>Alex Leiva</h1>
-            <p>Estudiante de <strong>1r-Cyber en <em>Enti-UB</em></strong></p>
-			<nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-					<li><a href="CV.html">CV</a></li>
-					<li><a href="Hobbies.html">Hobbies</a></li>
-					<li><a href="Contacto.html">Contacto</a></li>
-					<li><a href="microjuego.html">Microjuego</a></li>
-                </ul>
-            </nav>
-    </header>
+		<header>	
+				<h1>Alex Leiva</h1>
+				
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="CV.html">CV</a></li>
+						<li><a href="Hobbies.html">Hobbies</a></li>
+						<li><a href="Contacto.html">Contacto</a></li>
+						<li><a href="microjuego.html">Microjuego</a></li>
+					</ul>
+				</nav>
+		</header>
+		<p>Estudiante de <strong>1r-Cyber en <em>Enti-UB</em></strong></p>
 
 	<main>
 		<form>
-		<p><label for="numero">Tu numero:</label><input type="number" name="numero" id="numero" /></p>
-		<p><input type="submit" /> </p>
+		<h2> Adivina el numero</h2>
+		<p> Adivina el numero aleatorio genereado entre el 1 y el 100</p>
+		<p id = "resultado"> Prueba suerte! </p>
+		
+		<p><label for="numero">Tu numero:</label><input type="number" name="numero" id="campo-numero" /></p>
+		<p><input type="button" id="field-submit" value="Adivina!" onClick="compara_numero();"> </p>
 		</form>
 	</main>
 
     <footer>
-			<nav>
+		<nav class = "navegacion-web">
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="CV.html">CV</a></li>
