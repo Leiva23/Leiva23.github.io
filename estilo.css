@@ -49,8 +49,9 @@ padding: 0;
 margin: 0;
 }
 header nav ul li{
-	flex-grow: 1;
-		font-size: 32px;
+position: absolute;
+flex-grow: 1;
+font-size: 32px;
 
 }
 header nav ul a{
