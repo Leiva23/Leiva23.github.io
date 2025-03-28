@@ -31,7 +31,7 @@
 		}
 		else {					
 		contador++;
-				if (contador > 10) {
+				if (contador === 10) {
 				boton.disabled = true; 
 				resultado.innerHTML = "<em class=\"error\">Ya has realizado el maximo de intentos posibles, el numero era "+numeroRand+"</em>";
 				return;
