@@ -125,4 +125,7 @@ iframe{
 .field-error{
 	border: 1px solid #ff0000;
 }
-
+#campo-comentario{
+width:300px;
+weight:120px;
+}
