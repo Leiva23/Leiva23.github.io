@@ -40,7 +40,6 @@ color: grey;
 }
 
 header nav ul{
-position: absolute;
 List-style: none;
 display: flex;
 color: grey;
@@ -49,10 +48,9 @@ padding: 0;
 margin: 0;
 }
 header nav ul li{
-position: absolute;
 flex-grow: 1;
 font-size: 32px;
-
+position: absolute;
 }
 header nav ul a{
 	display:block;
