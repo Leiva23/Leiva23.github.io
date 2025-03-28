@@ -51,6 +51,8 @@ header nav ul li{
 flex-grow: 1;
 font-size: 32px;
 position: absolute;
+	right:0;
+	left:0;
 }
 header nav ul a{
 	display:block;
