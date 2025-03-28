@@ -46,13 +46,14 @@ color: grey;
 justify-content: space-evenly;
 padding: 0;
 margin: 0;
+	position: absolute;
+	right:0;
+	left:0;
 }
 header nav ul li{
 flex-grow: 1;
 font-size: 32px;
-position: absolute;
-	right:0;
-	left:0;
+
 }
 header nav ul a{
 	display:block;
